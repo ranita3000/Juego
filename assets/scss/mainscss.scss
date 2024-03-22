@@ -1,0 +1,258 @@
+
+@media only screen and (orientation:portrait) {
+    #content {display: none;}
+    #turn {display: block;}
+}
+
+@media only screen and (orientation:landscape) {
+    #content {display: flex;}
+    #turn {display: none;}
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#translateButton {
+    display: flex;
+
+    &.close {
+        display: none;
+    }
+}
+
+body {
+    background-color: #FEE4D6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    
+
+
+}
+
+
+.popup1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    color: white;
+    width: 55%;
+    height: 55%;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 3;
+    position: absolute;
+
+
+
+}
+
+.pantallainicio {
+    display: none; //flex
+
+    &.opened {
+        display: flex;
+    }
+}
+
+.texto1 {
+    font-size: 45px;
+}
+
+.texto2 {
+    font-size: 25px;
+}
+
+.botones {
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 50px;
+    border: 3px solid white;
+    color: white;
+}
+
+.popup2 {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: black;
+    color: white;
+    width: 55%;
+    height: 55%;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 3;
+    position: absolute;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+
+}
+
+.popup2texto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.encuentracirculo {
+    display: none;
+
+    &.opened {
+        display: flex;
+    }
+}
+
+
+
+
+.background1 {
+    display: none;
+
+    &.opened {
+        display: block;
+        position: relative;
+
+    }
+}
+
+
+
+.circle {
+    position: absolute;
+    z-index: 2;
+    max-width: 12.9%;
+    max-height: 12.9%;
+    right: 30.8%;
+    bottom: 57%;
+
+
+
+}
+
+.contador {
+    position: absolute;
+    z-index: 2;
+    right: 0%;
+    top: 10%;
+}
+
+.texto3 {
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+
+.circle img {
+    width: 100%;
+    /* La imagen ocupará todo el ancho del div */
+    height: 100%;
+    /* La imagen ocupará todo el alto del div */
+    object-fit: cover;
+}
+
+.error {
+    display: none;
+
+    &.opened {
+        display: flex;
+    }
+}
+
+.encuentratriangulo {
+    display: none;
+
+    &.opened {
+        display: flex;
+    }
+}
+
+.background2 {
+    display: none;
+
+    &.opened {
+        display: block;
+        position: relative;
+
+    }
+}
+
+.triangle {
+    position: absolute;
+    z-index: 2;
+    max-width: 12.9%;
+    max-height: 12.9%;
+    right: 30.9%;
+    bottom: 76.6%;
+
+
+}
+
+.triangle img {
+    width: 100%;
+    /* La imagen ocupará todo el ancho del div */
+    height: 100%;
+    /* La imagen ocupará todo el alto del div */
+    object-fit: cover;
+}
+
+
+.encuentracuadrado {
+    display: none;
+
+    &.opened {
+        display: flex;
+    }
+}
+
+.background3 {
+    display: none;
+
+    &.opened {
+        display: block;
+        position: relative;
+
+    }
+}
+
+
+
+.square {
+    position: absolute;
+    z-index: 2;
+    max-width: 12.9%;
+    max-height: 12.9%;
+    right: 69%;
+    bottom: 18%;
+
+
+}
+
+.square img {
+    width: 100%;
+    /* La imagen ocupará todo el ancho del div */
+    height: 100%;
+    /* La imagen ocupará todo el alto del div */
+    object-fit: cover;
+}
