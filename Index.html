@@ -1,85 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Prueba juego</title>
 
-    <link rel="stylesheet" href="assets/css/mainscss.css"/>
-    <link rel="stylesheet" href="assets/css/mainscss.css.map"/>
+    <link rel="stylesheet" href="assets/css/mainscss.css" />
+    <link rel="stylesheet" href="assets/css/mainscss.css.map" />
     <script src="app/main.js"></script>
 </head>
+
 <body>
     <div id="turn" class="texto3">Por favor gire su dispositivo</div>
     <div id="content">
         <div id="translateButton" class="popup2">
             <button id="es" class="botones texto2">Español</button>
-            <button id="en" class="botones texto2">English</button>   
+            <button id="en" class="botones texto2">English</button>
         </div>
-    
-    
+
+        <div id="introduccion" class="popup2">
+            <div class="texto2 popup2texto">
+                <span>Hola, me llamo Elio, y necesito tu ayuda para encontrar unas formas, ¿me ayudas?</span>
+                <button id="botonintroduccion" class="botones">Siguiente</button>
+            </div>
+            <img src="assets/img/saludando.png" height="200px" width="auto">
+        </div>
+
+        <div id="introduccion2" class="popup1">
+            <div class="popupshapes">
+                <div class="shapes">
+                    <img src="assets/img/circleshape.png" height="50px" width="50px">
+                    <span>Círculo</span>
+                </div>
+                <div class="shapes">
+                    <img src="assets/img/triangleshape.png" height="50px" width="50px">
+                    <span>Triángulo</span>
+                </div>
+                <div class="shapes">
+                    <img src="assets/img/squareshape.png" height="50px" width="50px">
+                    <span>Cuadrado</span>
+                </div>
+                <div class="shapes">
+                    <img src="assets/img/righttriangleshape.png" height="50px" width="50px">
+                    <span>Triángulo rectángulo</span>
+                </div>
+                <div class="shapes">
+                    <img src="assets/img/isoscelestriangleshape.png" height="50px" width="25px">
+                    <span>Triángulo isósceles</span>
+                </div>
+
+            </div>
+            
+            <button id="botonintroduccion2" class="botones">Siguiente</button>
+        </div>
+
+
         <div class="popup1 pantallainicio">
             <div class="texto1">COMENZAR JUEGO</div>
             <button id="1" class="botones startgame texto2">Jugar</button>
         </div>
-    
-    
-        <div class="popup2 encuentracirculo">
-            <div class="texto2 popup2texto">
-                <span>ENCUENTRA EL</span>
-                <button id="botoncirculo" class="botones">Jugar</button>
-            </div>
-            <img src="assets/img/circleshape.png" height="200px" width="200px">
-    
+
+
+        <div class="popup1 texto1 encuentracirculo">
+
+            <span>ENCUENTRA EL CÍRCULO</span>
+            <button id="botoncirculo" class="botones">Jugar</button>
+
+
+
         </div>
         <div class="background1">
-            <div id="contador" class="texto3 contador">10</div>
-            <div class="circlelevel"><img src="assets/img/fondocirculo.jpg" height="100%" width="100%"/></div>
-            <div class="circle"><img src="assets/img/circulo.png"  ></div>
+            <div id="contador" class="texto3 contador">7</div>
+            <div class="circlelevel"><img src="assets/img/fondocirculo.jpg" height="100%" width="100%" /></div>
+            <div class="circle"><img src="assets/img/circulo.png"></div>
+
+        </div>
+
+
+        <div class="popup2 error">
+            <div class="texto2 popup2texto">
+                <span>UF! CASI!</span>
+                <button id="2" class="botones returnmain">Intentalo otra vez</button>
+            </div>
+            <img src="assets/img/triste.png" height="200px" width="auto">
+
             
         </div>
-    
-    
-        <div class="popup1 error">
-            <div class="texto1">UF! CASI!</div>
-            <button id="2" class="botones returnmain texto2">Intentalo otra vez</button>
-        </div>
-    
-    
-        <div class="popup2 encuentratriangulo">
-            <div class="texto2 popup2texto">
-                <span>ENCUENTRA EL</span>
-                <button id="botontriangulo" class="botones">Jugar</button>
-            </div>
-            <img src="assets/img/triangleshape.png" height="200px" width="200px">
-    
+
+
+        <div class="popup1 texto1 encuentratriangulo">
+
+            <span>ENCUENTRA EL TRIÁNGULO</span>
+            <button id="botontriangulo" class="botones">Jugar</button>
+
+
+
         </div>
         <div class="background2">
-            <div id="contador2" class="texto3 contador">10</div>
+            <div id="contador2" class="texto3 contador">7</div>
             <div class="triangle"><img src="assets/img/triangulo.png"></div>
-            <div class="trianglelevel"><img src="assets/img/fondotriangulo.jpg" height="100%" width="100%"/></div>
-            
+            <div class="trianglelevel"><img src="assets/img/fondotriangulo.jpg" height="100%" width="100%" /></div>
+
         </div>
-    
-    
-        <div class="popup2 encuentracuadrado">
-            <div class="texto2 popup2texto">
-                <span>ENCUENTRA EL</span>
-                <button id="botoncuadrado" class="botones">Jugar</button>
-            </div>
-            <img src="assets/img/squareshape.png" height="200px" width="200px">
-    
+
+
+        <div class="popup1 texto1 encuentracuadrado">
+
+            <span>ENCUENTRA EL CUADRADO</span>
+            <button id="botoncuadrado" class="botones">Jugar</button>
+
         </div>
         <div class="background3">
-            <div id="contador3" class="texto3 contador">10</div>
+            <div id="contador3" class="texto3 contador">7</div>
             <div class="square"><img src="assets/img/cuadrado.png"></div>
-            <div class="squarelevel"><img src="assets/img/fondocuadrado.jpg" height="100%" width="100%"/></div>
+            <div class="squarelevel"><img src="assets/img/fondocuadrado.jpg" height="100%" width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentratriangulorectangulo">
+
+            <span>ENCUENTRA EL TRIÁNGULO RECTÁNGULO</span>
+            <button id="botontriangulorectangulo" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background4">
+            <div id="contador4" class="texto3 contador">7</div>
+            <div class="righttriangle"><img src="assets/img/triangulorectangulo.png"></div>
+            <div class="righttrianglelevel"><img src="assets/img/fondotriangulorectangulo.jpg" height="100%"
+                    width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentratrianguloisosceles">
+
+            <span>ENCUENTRA EL TRIÁNGULO ISÓSCELES</span>
+            <button id="botontrianguloisosceles" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background5">
+            <div id="contador5" class="texto3 contador">7</div>
+            <div class="isoscelestriangle"><img src="assets/img/trianguloisosceles.png"></div>
+            <div class="isoscelestrianglelevel"><img src="assets/img/fondotrianguloisosceles.jpg" height="100%"
+                    width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentracirculo2">
+
+            <span>ENCUENTRA EL CÍRCULO</span>
+            <button id="botoncirculo2" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background6">
+            <div id="contador6" class="texto3 contador">10</div>
+            <div class="circlelevel2"><img src="assets/img/fondocirculo2.jpg" height="100%" width="100%" /></div>
+            <div class="circle2"><img src="assets/img/circulo2.png"></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentratriangulo2">
+
+            <span>ENCUENTRA EL TRIÁNGULO</span>
+            <button id="botontriangulo2" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background7">
+            <div id="contador7" class="texto3 contador">10</div>
+            <div class="triangle2"><img src="assets/img/triangulo2.png"></div>
+            <div class="trianglelevel2"><img src="assets/img/fondotriangulo2.jpg" height="100%" width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentracuadrado2">
+
+            <span>ENCUENTRA EL CUADRADO</span>
+            <button id="botoncuadrado2" class="botones">Jugar</button>
+
+        </div>
+        <div class="background8">
+            <div id="contador8" class="texto3 contador">10</div>
+            <div class="square2"><img src="assets/img/cuadrado2.png"></div>
+            <div class="squarelevel2"><img src="assets/img/fondocuadrado2.jpg" height="100%" width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentratriangulorectangulo2">
+
+            <span>ENCUENTRA EL TRIÁNGULO RECTÁNGULO</span>
+            <button id="botontriangulorectangulo2" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background9">
+            <div id="contador9" class="texto3 contador">10</div>
+            <div class="righttriangle2"><img src="assets/img/triangulorectangulo2.png"></div>
+            <div class="righttrianglelevel2"><img src="assets/img/fondotriangulorectangulo2.jpg" height="100%"
+                    width="100%" /></div>
+
+        </div>
+
+        <div class="popup1 texto1 encuentratrianguloisosceles2">
+
+            <span>ENCUENTRA EL TRIÁNGULO ISÓSCELES</span>
+            <button id="botontrianguloisosceles2" class="botones">Jugar</button>
+
+
+        </div>
+        <div class="background10">
+            <div id="contador10" class="texto3 contador">10</div>
+            <div class="isoscelestriangle2"><img src="assets/img/trianguloisosceles2.png"></div>
+            <div class="isoscelestrianglelevel2"><img src="assets/img/fondotrianguloisosceles2.jpg" height="100%"
+                    width="100%" /></div>
+
+        </div>
+
+        <div class="popup2 end">
+            <div class="texto2 popup2texto">
+                <span>¡MUY BIEN!</span>
+                <button id="endbutton" class="botones returnmain">Siguiente</button>
+            </div>
+            <img src="assets/img/feliz.png" height="200px" width="auto">
+
             
         </div>
 
     </div>
-    
-   
-    
+
+
+
 
 </body>
