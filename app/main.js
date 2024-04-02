@@ -1,6 +1,13 @@
 window.onload = () => {
 
-
+    var audio = document.querySelector('#backgroundmusic');
+    audio.volume = 0.25;
+    var correctaudio = document.querySelector('#correcto');
+    correctaudio.volumen = 0.25;
+    var incorrectaudio = document.querySelector('#incorrecto');
+    incorrectaudio.volumen = 0.25;
+    var select = document.querySelector('#seleccionar');
+    select.volumen = 0.25;
 
     var introduccion = document.querySelector('#introduccion');
     var nextslide = document.querySelector('#botonintroduccion');
@@ -13,11 +20,13 @@ window.onload = () => {
     closemaintab.addEventListener('click', function () {
         firstpage.classList.add("close");
         introduccion.classList.add("opened")
+        select.play();
     });
 
     nextslide.addEventListener('click', function () {
         introduccion.classList.remove("opened")
         introduccion2.classList.add("opened")
+        select.play();
 
     });
 
@@ -25,6 +34,7 @@ window.onload = () => {
     openmainpage.addEventListener('click', function() {
         introduccion2.classList.remove("opened")
         findcircle.classList.add("opened")
+        select.play();
     });
 
 
@@ -44,6 +54,7 @@ window.onload = () => {
         var contador = 7;
         findcircle.classList.remove("opened");
         firstlevel.classList.add("opened");
+        select.play();
 
         comenzarContador = setInterval(function () {
             var contadorElemento = document.querySelector('#contador');
@@ -56,6 +67,7 @@ window.onload = () => {
                 clearInterval(comenzarContador);
                 firstlevel.classList.remove("opened");
                 error.classList.add("opened");
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -63,12 +75,14 @@ window.onload = () => {
             clearInterval(comenzarContador);
             firstlevel.classList.remove("opened");
             findtriangle.classList.add("opened");
+            correctaudio.play();
         });
 
         circlelevel.addEventListener('click', function () {
             clearInterval(comenzarContador);
             firstlevel.classList.remove("opened");
             error.classList.add("opened");
+            incorrectaudio.play();
         });
     });
 
@@ -76,7 +90,8 @@ window.onload = () => {
     returnmainpage.addEventListener('click', function () {
         error.classList.remove("opened");
         firstpage.classList.remove("close");
-        clearInterval(comenzarContador); // Detener el contador al regresar a la página principal
+        clearInterval(comenzarContador); 
+        select.play();
     });
 
 
@@ -91,6 +106,7 @@ window.onload = () => {
 
         findtriangle.classList.remove("opened")
         secondlevel.classList.add("opened")
+        select.play();
 
         comenzarContador2 = setInterval(function () {
             var contadorElemento2 = document.querySelector('#contador2');
@@ -103,6 +119,7 @@ window.onload = () => {
                 clearInterval(comenzarContador2);
                 secondlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -110,6 +127,7 @@ window.onload = () => {
             clearInterval(comenzarContador2);
             secondlevel.classList.remove("opened")
             findsquare.classList.add("opened")
+            correctaudio.play();
 
 
         });
@@ -118,6 +136,7 @@ window.onload = () => {
             clearInterval(comenzarContador2);
             secondlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -136,6 +155,7 @@ window.onload = () => {
         var contador3 = 7;
         findsquare.classList.remove("opened")
         thirdlevel.classList.add("opened")
+        select.play();
 
         comenzarContador3 = setInterval(function () {
             var contadorElemento3 = document.querySelector('#contador3');
@@ -148,6 +168,7 @@ window.onload = () => {
                 clearInterval(comenzarContador3);
                 thirdlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -155,6 +176,8 @@ window.onload = () => {
             clearInterval(comenzarContador3);
             thirdlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
+            
 
         });
 
@@ -162,6 +185,7 @@ window.onload = () => {
             clearInterval(comenzarContador3);
             thirdlevel.classList.remove("opened")
             findrighttriangle.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -179,6 +203,7 @@ window.onload = () => {
         var contador4 = 7;
         findrighttriangle.classList.remove("opened")
         fourthlevel.classList.add("opened")
+        select.play();
 
         comenzarContador4 = setInterval(function () {
             var contadorElemento4 = document.querySelector('#contador4');
@@ -191,6 +216,7 @@ window.onload = () => {
                 clearInterval(comenzarContador4);
                 fourthlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -198,6 +224,7 @@ window.onload = () => {
             clearInterval(comenzarContador4);
             fourthlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -205,6 +232,7 @@ window.onload = () => {
             clearInterval(comenzarContador4);
             fourthlevel.classList.remove("opened")
             findisoscelestriangle.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -221,6 +249,7 @@ window.onload = () => {
         var contador5 = 7;
         findisoscelestriangle.classList.remove("opened")
         fifthlevel.classList.add("opened")
+        select.play();
 
         comenzarContador5 = setInterval(function () {
             var contadorElemento5 = document.querySelector('#contador5');
@@ -233,6 +262,7 @@ window.onload = () => {
                 clearInterval(comenzarContador5);
                 fifthlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -240,6 +270,7 @@ window.onload = () => {
             clearInterval(comenzarContador5);
             fifthlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -247,6 +278,7 @@ window.onload = () => {
             clearInterval(comenzarContador5);
             fifthlevel.classList.remove("opened")
             findcircle2.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -264,6 +296,7 @@ window.onload = () => {
         var contador6 = 10;
         findcircle2.classList.remove("opened")
         sixthlevel.classList.add("opened")
+        select.play();
 
         comenzarContador6 = setInterval(function () {
             var contadorElemento6 = document.querySelector('#contador6');
@@ -276,6 +309,7 @@ window.onload = () => {
                 clearInterval(comenzarContador6);
                 sixthlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -283,6 +317,7 @@ window.onload = () => {
             clearInterval(comenzarContador6);
             sixthlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -290,6 +325,7 @@ window.onload = () => {
             clearInterval(comenzarContador6);
             sixthlevel.classList.remove("opened")
             findtriangle2.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -307,6 +343,7 @@ window.onload = () => {
         var contador7 = 10;
         findtriangle2.classList.remove("opened")
         seventhlevel.classList.add("opened")
+        select.play();
 
         comenzarContador7 = setInterval(function () {
             var contadorElemento7 = document.querySelector('#contador7');
@@ -319,6 +356,7 @@ window.onload = () => {
                 clearInterval(comenzarContador7);
                 seventhlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -326,6 +364,7 @@ window.onload = () => {
             clearInterval(comenzarContador7);
             seventhlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -333,6 +372,7 @@ window.onload = () => {
             clearInterval(comenzarContador7);
             seventhlevel.classList.remove("opened")
             findsquare2.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -350,6 +390,7 @@ window.onload = () => {
         var contador8 = 10;
         findsquare2.classList.remove("opened")
         eightlevel.classList.add("opened")
+        select.play();
 
         comenzarContador8 = setInterval(function () {
             var contadorElemento8 = document.querySelector('#contador8');
@@ -362,6 +403,7 @@ window.onload = () => {
                 clearInterval(comenzarContador8);
                 eightlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -369,6 +411,7 @@ window.onload = () => {
             clearInterval(comenzarContador8);
             eightlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -376,6 +419,7 @@ window.onload = () => {
             clearInterval(comenzarContador8);
             eightlevel.classList.remove("opened")
             findsrighttriangle2.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -392,6 +436,7 @@ window.onload = () => {
         var contador9 = 10;
         findsrighttriangle2.classList.remove("opened")
         ninthlevel.classList.add("opened")
+        select.play();
 
         comenzarContador9 = setInterval(function () {
             var contadorElemento9 = document.querySelector('#contador9');
@@ -404,6 +449,7 @@ window.onload = () => {
                 clearInterval(comenzarContador9);
                 ninthlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -411,6 +457,7 @@ window.onload = () => {
             clearInterval(comenzarContador9);
             ninthlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -418,6 +465,7 @@ window.onload = () => {
             clearInterval(comenzarContador9);
             ninthlevel.classList.remove("opened")
             findisoscelestriangle2.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -434,6 +482,7 @@ window.onload = () => {
         var contador10 = 10;
         findisoscelestriangle2.classList.remove("opened")
         tenthlevel.classList.add("opened")
+        select.play();
 
         comenzarContador10 = setInterval(function () {
             var contadorElemento10 = document.querySelector('#contador10');
@@ -446,6 +495,7 @@ window.onload = () => {
                 clearInterval(comenzarContador10);
                 tenthlevel.classList.remove("opened")
                 error.classList.add("opened")
+                incorrectaudio.play();
             }
         }, 1000);
 
@@ -453,6 +503,7 @@ window.onload = () => {
             clearInterval(comenzarContador10);
             tenthlevel.classList.remove("opened")
             error.classList.add("opened")
+            incorrectaudio.play();
 
         });
 
@@ -460,6 +511,7 @@ window.onload = () => {
             clearInterval(comenzarContador10);
             tenthlevel.classList.remove("opened")
             end.classList.add("opened")
+            correctaudio.play();
 
         });
 
@@ -472,6 +524,7 @@ window.onload = () => {
     backtobeginning.addEventListener('click', function() {
         end.classList.remove("opened")
         firstpage.classList.remove("close")
+        select.play();
 
     });
 
