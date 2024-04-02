@@ -471,7 +471,7 @@ window.onload = () => {
 
     backtobeginning.addEventListener('click', function() {
         end.classList.remove("opened")
-        firstpage.classList.add("opened")
+        firstpage.classList.remove("close")
 
     });
 

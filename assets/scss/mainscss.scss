@@ -48,6 +48,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     z-index: 3;
     position: absolute;
+    @media only screen and (max-height: 500px) {
+        gap: 4%;
+    }
     
 
 
@@ -69,6 +72,7 @@ body {
     align-items: center;
     text-align: center;
     gap: 3%;
+
    
 
 
@@ -92,6 +96,9 @@ body {
     gap: 5px;
     margin: 3%;
     margin-bottom: 0%;
+    @media only screen and (max-height: 500px) {
+        margin: 1%;
+    }
 }
 
 .pantallainicio {
@@ -104,10 +111,16 @@ body {
 
 .texto1 {
     font-size: 45px;
+    @media only screen and (max-height: 500px) {
+        font-size: 35px;
+    }
 }
 
 .texto2 {
     font-size: 25px;
+    @media only screen and (max-height: 500px) {
+        font-size: 12px;
+    }
 }
 
 .botones {
@@ -116,6 +129,10 @@ body {
     border-radius: 50px;
     border: 3px solid white;
     color: white;
+    @media only screen and (max-height: 500px) {
+        padding: 5px 7px;
+        border: 2px solid white;
+    }
 }
 
 .popup2 {
@@ -136,9 +153,22 @@ body {
 
     
 
+    
+
 }
 
+.image{
+    max-width: 20%;
+    
+}
 
+.image img{
+    width: 100%;
+    /* La imagen ocupará todo el ancho del div */
+    height: 100%;
+    /* La imagen ocupará todo el alto del div */
+    object-fit: cover;
+}
 
 .popup2texto{
     display: flex;
@@ -147,6 +177,7 @@ body {
     align-items: center;
     gap: 10px;
     max-width: 35%;
+    
 }
 
 
