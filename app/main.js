@@ -1,80 +1,19 @@
 window.onload = () => {
 
 
-    var lenguage = document.querySelector('#translateButton');
-    var spanish = document.querySelector('#es');
-    var translateButton = document.querySelector('#en');
+
     var introduccion = document.querySelector('#introduccion');
     var nextslide = document.querySelector('#botonintroduccion');
     var closemaintab = document.querySelector('.startgame');
     var firstpage = document.querySelector('.pantallainicio');
     var findcircle = document.querySelector('.encuentracirculo');
-
-    
-    const email = 'patriciagarcagil@gmail.com';
-
-
-    translateButton.addEventListener('click', async () => {
-        lenguage.classList.add("close")
-        introduccion.classList.add("opened")
-        console.log('Translate button clicked.');
-
-        const divs = document.querySelectorAll('div');
-        const divsContent = Array.from(divs).map(div => div.textContent.trim());
-
-        try {
-            const translations = await translateText(divsContent, 'es', 'en');
-            divs.forEach((div, index) => {
-                div.innerText = translations[index];
-            });
-        } catch (error) {
-            console.error('Error al traducir el texto:', error);
-        }
-
-
-    });
-
-    async function translateText(texts, sourceLang, targetLang) {
-        console.log('translateText function called with text:', texts);
-        try {
-            const translations = []
-            for (const text of texts) {
-                const response = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=es|en&de=${encodeURIComponent(email)}`);
-                const data = await response.json();
-                translations.push(data.responseData.translatedText);
-
-            }
-            
-            return translations;
-        } catch (error) {
-            console.error('Error al traducir el texto:', error);
-            throw error;
-        }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    spanish.addEventListener('click', function () {
-        lenguage.classList.add("close")
-        introduccion.classList.add("opened")
-
-    });
-
     var introduccion2 = document.querySelector('#introduccion2');
     var openmainpage = document.querySelector('#botonintroduccion2');
+
+    closemaintab.addEventListener('click', function () {
+        firstpage.classList.add("close");
+        introduccion.classList.add("opened")
+    });
 
     nextslide.addEventListener('click', function () {
         introduccion.classList.remove("opened")
@@ -82,15 +21,15 @@ window.onload = () => {
 
     });
 
+
     openmainpage.addEventListener('click', function() {
         introduccion2.classList.remove("opened")
-        firstpage.classList.add("opened")
+        findcircle.classList.add("opened")
     });
 
-    closemaintab.addEventListener('click', function () {
-        firstpage.classList.remove("opened");
-        findcircle.classList.add("opened");
-    });
+
+
+    
 
     
 
@@ -136,7 +75,7 @@ window.onload = () => {
     var returnmainpage = document.querySelector('.returnmain');
     returnmainpage.addEventListener('click', function () {
         error.classList.remove("opened");
-        firstpage.classList.add("opened");
+        firstpage.classList.remove("close");
         clearInterval(comenzarContador); // Detener el contador al regresar a la página principal
     });
 

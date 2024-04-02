@@ -18,14 +18,6 @@
     
 }
 
-#translateButton {
-    display: flex;
-
-    &.close {
-        display: none;
-    }
-}
-
 body {
     background-color: #FEE4D6;
     height: 100vh;
@@ -103,10 +95,10 @@ body {
 }
 
 .pantallainicio {
-    display: none; 
+    display: flex; 
 
-    &.opened {
-        display: flex;
+    &.close {
+        display: none;
     }
 }
 
@@ -197,8 +189,8 @@ body {
 .contador {
     position: absolute;
     z-index: 2;
-    right: 0%;
-    top: 10%;
+    right: 7%;
+    top: 20%;
 }
 
 .texto3 {
