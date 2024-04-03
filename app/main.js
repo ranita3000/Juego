@@ -7,7 +7,7 @@ window.onload = () => {
     var incorrectaudio = document.querySelector('#incorrecto');
     incorrectaudio.volumen = 0.25;
     var select = document.querySelector('#seleccionar');
-    select.volumen = 0.15;
+    select.volumen = 0.25;
 
     var introduccion = document.querySelector('#introduccion');
     var nextslide = document.querySelector('#botonintroduccion');
